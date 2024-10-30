@@ -6,6 +6,8 @@ public class Application {
     public void printMenu() {
         Scanner sc = new Scanner(System.in);
 
+        Libro libros = new Libro("A123", "Effective Java ", "Joshua Bloch ");
+
         int opcion = 0;
         do {
             java.lang.System.out.println("\nGestor de Libros Técnicos de Programación\n 1. Añadir libro\n 2. Ver todos los libros\n 3. Eliminar libro\n 4. Cambiar repositorio\n 5. Salir\n Seleccione una opción: ");
@@ -28,7 +30,8 @@ public class Application {
                     break;
 
                 case 2:
-                    java.lang.System.out.println("Opción 2: Ver todos los libros");
+                    System.out.println("Lista de libros: \n");
+                    libros.showBooks();
                     break;
 
                 case 3:
@@ -46,7 +49,9 @@ public class Application {
             }
         } while (opcion != 5);
 
-        Libro libro = new Libro("A123", "Effective Java ", "Joshua Bloch ");
+
+
+
 
     }
 }

@@ -13,9 +13,9 @@ public class Libro {
         this.Autor = Autor;
     }
 
+    public void showBooks () {
+        System.out.println("ISBN: " + this.ISBN + " Título: " + this.Titulo + " Autor: " + this.Autor);
+    }
 
 
-    String [] listaDeLibro = {
-
-    };
 }

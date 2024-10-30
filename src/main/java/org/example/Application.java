@@ -11,9 +11,9 @@ public class Application {
         this.listaLibros.add(new Libro("A124", "In Search of Lost Time", "Marcel Proust"));
         this.listaLibros.add(new Libro("A125", "One Hundred Years of Solitude", "Gabriel García Márquez"));
     }
-
+    Scanner sc = new Scanner(System.in);
     public void printMenu() {
-        Scanner sc = new Scanner(System.in);
+
 
         int opcion = 0;
         do {
@@ -35,6 +35,7 @@ public class Application {
             switch (opcion) {
                 case 1:
                     java.lang.System.out.println("Opción 1: Añadir libro");
+                    this.addLibro();
                     break;
                 case 2:
                     System.out.println("Opción 2: Ver todos los libros ");
@@ -51,6 +52,18 @@ public class Application {
                     break;
             }
         } while (opcion != 5);
+    }
+
+    private void addLibro() {
+        System.out.println("Ingrese el ISBN");
+        String addISBN = sc.nextLine();
+        System.out.println("Ingrese el título");
+        String addTitulo = sc.nextLine();
+        System.out.println("Ingrese autor");
+        String addAutor = sc.nextLine();
+        System.out.println("Libro añadido correctamente");
+        Libro nuevoLibro = new Libro(addISBN, addTitulo, addAutor);
+        listaLibros.add(nuevoLibro);
     }
 
     private void printLista() {

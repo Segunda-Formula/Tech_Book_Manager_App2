@@ -1,15 +1,24 @@
 package org.example;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Application {
+
+    private ArrayList<Libro> listaLibros = new ArrayList<>();
+
+    public Application() {
+        this.listaLibros.add(new Libro("A123", "Java for dummies", "Burd Barry"));
+        this.listaLibros.add(new Libro("A124", "In Search of Lost Time", "Marcel Proust"));
+        this.listaLibros.add(new Libro("A125", "One Hundred Years of Solitude", "Gabriel García Márquez"));
+    }
+
     public void printMenu() {
         Scanner sc = new Scanner(System.in);
 
-        Libro libros = new Libro("A123", "Effective Java ", "Joshua Bloch ");
-
         int opcion = 0;
         do {
+            System.out.println("_____________________________________________________________________");
             java.lang.System.out.println("\nGestor de Libros Técnicos de Programación\n 1. Añadir libro\n 2. Ver todos los libros\n 3. Eliminar libro\n 4. Cambiar repositorio\n 5. Salir\n Seleccione una opción: ");
 
             java.lang.String input = sc.nextLine();
@@ -28,30 +37,29 @@ public class Application {
                 case 1:
                     java.lang.System.out.println("Opción 1: Añadir libro");
                     break;
-
                 case 2:
-                    System.out.println("Lista de libros: \n");
-                    libros.showBooks();
+                    System.out.println("Opción 2: Ver todos los libros ");
+                    this.printLista();
                     break;
-
                 case 3:
                     java.lang.System.out.println("Opción 3: Eliminar libro");
                     break;
-
                 case 4:
                     java.lang.System.out.println("Opción 4: Cambiar repositorio");
                     break;
-
                 case 5:
                     java.lang.System.out.println("Opción 5: Salir");
                     break;
-
             }
         } while (opcion != 5);
 
 
+    }
 
-
-
+    private void printLista() {
+        if (listaLibros.isEmpty()) System.out.println("No hay libros en la colección.");
+        for (Libro libro : listaLibros) {
+            System.out.println(libro.toString());
+        }
     }
 }

@@ -13,9 +13,11 @@ public class Libro {
         this.Autor = Autor;
     }
 
-    public void showBooks () {
-        System.out.println("ISBN: " + this.ISBN + " Título: " + this.Titulo + " Autor: " + this.Autor);
+    @Override
+    public String toString() {
+        return
+                "\nISBN: " + ISBN +
+                " \nTítulo: " + Titulo +
+                " \nAutor: " + Autor;
     }
-
-
 }

@@ -45,5 +45,8 @@ public class Application {
 
             }
         } while (opcion != 5);
+
+        Libro libro = new Libro("A123", "Effective Java ", "Joshua Bloch ");
+
     }
 }

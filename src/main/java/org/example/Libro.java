@@ -5,6 +5,10 @@ public class Libro {
     private String Titulo;
     private String Autor;
 
+    public String getISBN() {
+        return ISBN;
+    }
+
     public Libro (String ISBN, String Titulo, String Autor){
         this.ISBN = ISBN;
         this.Titulo = Titulo;

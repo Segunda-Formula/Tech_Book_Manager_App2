@@ -63,17 +63,23 @@ public class Application {
         String addAutor = sc.nextLine();
         Libro nuevoLibro = new Libro(addISBN, addTitulo, addAutor);
 
+        boolean isValid = true;
 
         if (addISBN.isEmpty() || addTitulo.isEmpty() || addAutor.isEmpty()){
             System.out.println("Todos los campos son obligatorios. Por favor, intente nuevamente.");
+            isValid = false;
         }
-        if (!addISBN.isEmpty() == !addTitulo.isEmpty() == !addAutor.isEmpty()) {
+        for (Libro libro : listaLibros) {
+            if (libro.getISBN().equals(addISBN)){
+                System.out.println("Ya existe un libro con ese ISBN. No se puede añadir el libro.");
+                isValid = false;
+            }
+        }
+
+        if (isValid) {
+            listaLibros.add(nuevoLibro);
             System.out.println("Libro añadido correctamente");
         }
-        if (addISBN.contains(addISBN)){
-            System.out.println("Ya existe un libro con ese ISBN. No se puede añadir el libro.");
-        }
-        listaLibros.add(nuevoLibro);
     }
 
     private void printLista() {

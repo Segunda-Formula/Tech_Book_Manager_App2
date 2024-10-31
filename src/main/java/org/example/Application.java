@@ -36,7 +36,7 @@ public class Application {
                 case 1:
                     java.lang.System.out.println("Opción 1: Añadir libro");
                     this.addLibro();
-                    break;
+                    continue;
                 case 2:
                     System.out.println("Opción 2: Ver todos los libros ");
                     this.printLista();
@@ -61,8 +61,13 @@ public class Application {
         String addTitulo = sc.nextLine();
         System.out.println("Ingrese autor");
         String addAutor = sc.nextLine();
-        System.out.println("Libro añadido correctamente");
         Libro nuevoLibro = new Libro(addISBN, addTitulo, addAutor);
+        if (addISBN.isEmpty() || addTitulo.isEmpty() || addAutor.isEmpty()){
+            System.out.println("Todos los campos son obligatorios. Por favor, intente nuevamente.");
+        }
+        if (!addISBN.isEmpty() || !addTitulo.isEmpty() || !addAutor.isEmpty()) {
+            System.out.println("Libro añadido correctamente");
+        }
         listaLibros.add(nuevoLibro);
     }
 

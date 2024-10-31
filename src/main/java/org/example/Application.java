@@ -1,6 +1,7 @@
 package org.example;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class Application {
 
@@ -43,6 +44,7 @@ public class Application {
                     break;
                 case 3:
                     java.lang.System.out.println("Opción 3: Eliminar libro");
+                    this.eliminarISBN();
                     break;
                 case 4:
                     java.lang.System.out.println("Opción 4: Cambiar repositorio");
@@ -81,11 +83,30 @@ public class Application {
             System.out.println("Libro añadido correctamente");
         }
     }
-
     private void printLista() {
         if (listaLibros.isEmpty()) System.out.println("No hay libros en la colección.");
         for (Libro libro : listaLibros) {
             System.out.println(libro.toString());
         }
+    }
+
+    boolean isValid = true;
+
+    private boolean validarISBN(String isbn){
+        Pattern patron = Pattern.compile("");
+        return patron.matcher(isbn).matches();
+    }
+
+    private void eliminarISBN() {
+        System.out.println("Ingrese el ISBN a eliminar");
+        String libroEliminar = sc.nextLine();
+        if (!validarISBN(libroEliminar)){
+            isValid = true;
+            System.out.println("ISBN inválido. Debe ser una letra seguida de tres números");
+        }
+        listaLibros.removeIf(libro -> libro.getISBN().equalsIgnoreCase(libroEliminar));
+        isValid = false;
+        System.out.println("Libro eliminado con éxito");
+
     }
 }

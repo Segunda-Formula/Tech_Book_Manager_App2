@@ -62,11 +62,16 @@ public class Application {
         System.out.println("Ingrese autor");
         String addAutor = sc.nextLine();
         Libro nuevoLibro = new Libro(addISBN, addTitulo, addAutor);
+
+
         if (addISBN.isEmpty() || addTitulo.isEmpty() || addAutor.isEmpty()){
             System.out.println("Todos los campos son obligatorios. Por favor, intente nuevamente.");
         }
-        if (!addISBN.isEmpty() || !addTitulo.isEmpty() || !addAutor.isEmpty()) {
+        if (!addISBN.isEmpty() == !addTitulo.isEmpty() == !addAutor.isEmpty()) {
             System.out.println("Libro añadido correctamente");
+        }
+        if (addISBN.contains(addISBN)){
+            System.out.println("Ya existe un libro con ese ISBN. No se puede añadir el libro.");
         }
         listaLibros.add(nuevoLibro);
     }

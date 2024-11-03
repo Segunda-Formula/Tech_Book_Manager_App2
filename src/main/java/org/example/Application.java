@@ -1,18 +1,20 @@
 package org.example;
+
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.regex.Pattern;
 
 public class Application {
 
-    private ArrayList<Libro> listaLibros = new ArrayList<>();
+    private ArrayList<Book> bookList = new ArrayList<>();
 
     public Application() {
-        this.listaLibros.add(new Libro("A123", "Java for dummies", "Burd Barry"));
-        this.listaLibros.add(new Libro("A124", "In Search of Lost Time", "Marcel Proust"));
-        this.listaLibros.add(new Libro("A125", "One Hundred Years of Solitude", "Gabriel García Márquez"));
+        this.bookList.add(new Book("A123", "Java for dummies", "Burd Barry"));
+        this.bookList.add(new Book("A124", "In Search of Lost Time", "Marcel Proust"));
+        this.bookList.add(new Book("A125", "One Hundred Years of Solitude", "Gabriel García Márquez"));
     }
+
     Scanner sc = new Scanner(System.in);
+
     public void printMenu() {
 
 
@@ -36,15 +38,15 @@ public class Application {
             switch (opcion) {
                 case 1:
                     java.lang.System.out.println("Opción 1: Añadir libro");
-                    this.addLibro();
+                    this.addBook();
                     continue;
                 case 2:
                     System.out.println("Opción 2: Ver todos los libros ");
-                    this.printLista();
+                    this.printList();
                     break;
                 case 3:
                     java.lang.System.out.println("Opción 3: Eliminar libro");
-                    this.eliminarISBN();
+                    this.deleteBook();
                     break;
                 case 4:
                     java.lang.System.out.println("Opción 4: Cambiar repositorio");
@@ -56,57 +58,56 @@ public class Application {
         } while (opcion != 5);
     }
 
-    private void addLibro() {
+    private void addBook() {
         System.out.println("Ingrese el ISBN");
         String addISBN = sc.nextLine();
         System.out.println("Ingrese el título");
         String addTitulo = sc.nextLine();
         System.out.println("Ingrese autor");
         String addAutor = sc.nextLine();
-        Libro nuevoLibro = new Libro(addISBN, addTitulo, addAutor);
+        Book nuevoBook = new Book(addISBN, addTitulo, addAutor);
 
         boolean isValid = true;
 
-        if (addISBN.isEmpty() || addTitulo.isEmpty() || addAutor.isEmpty()){
+        if (addISBN.isEmpty() || addTitulo.isEmpty() || addAutor.isEmpty()) {
             System.out.println("Todos los campos son obligatorios. Por favor, intente nuevamente.");
             isValid = false;
         }
-        for (Libro libro : listaLibros) {
-            if (libro.getISBN().equals(addISBN)){
+        for (Book book : bookList) {
+            if (book.getISBN().equals(addISBN)) {
                 System.out.println("Ya existe un libro con ese ISBN. No se puede añadir el libro.");
                 isValid = false;
             }
         }
 
         if (isValid) {
-            listaLibros.add(nuevoLibro);
+            bookList.add(nuevoBook);
             System.out.println("Libro añadido correctamente");
         }
     }
-    private void printLista() {
-        if (listaLibros.isEmpty()) System.out.println("No hay libros en la colección.");
-        for (Libro libro : listaLibros) {
-            System.out.println(libro.toString());
+
+    private void printList() {
+        if (bookList.isEmpty()) System.out.println("No hay libros en la colección.");
+        for (Book book : bookList) {
+            System.out.println(book.toString());
         }
     }
 
-    boolean isValid = true;
-
-    private boolean validarISBN(String isbn){
-        Pattern patron = Pattern.compile("");
-        return patron.matcher(isbn).matches();
+    private boolean isbnIsValid(String userISBN) {
+        String patron = "^[A-Za-z]\\d{3}$";
+        return userISBN.matches(patron);
     }
 
-    private void eliminarISBN() {
-        System.out.println("Ingrese el ISBN a eliminar");
-        String libroEliminar = sc.nextLine();
-        if (!validarISBN(libroEliminar)){
-            isValid = true;
-            System.out.println("ISBN inválido. Debe ser una letra seguida de tres números");
+    private void deleteBook() {
+        System.out.println("Ingrese el ISBN del libro a eliminar (una letra seguida de tres números, por ejemplo, A123): ");
+        String userISBN = sc.nextLine();
+        boolean isDeleted = bookList.removeIf(book -> book.getISBN().equalsIgnoreCase(userISBN));
+        if (!isbnIsValid(userISBN)) {
+            System.out.println("ISBN inválido. Debe ser una letra seguida de tres números (por ejemplo, A123).");
+            return;
         }
-        listaLibros.removeIf(libro -> libro.getISBN().equalsIgnoreCase(libroEliminar));
-        isValid = false;
-        System.out.println("Libro eliminado con éxito");
-
+        if (isDeleted) {
+            System.out.println("Libro eliminado con éxito");
+        }
     }
 }

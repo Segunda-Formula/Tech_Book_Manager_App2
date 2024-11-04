@@ -101,11 +101,11 @@ public class Application {
     private void deleteBook() {
         System.out.println("Ingrese el ISBN del libro a eliminar (una letra seguida de tres números, por ejemplo, A123): ");
         String userISBN = sc.nextLine();
-        boolean isDeleted = bookList.removeIf(book -> book.getISBN().equalsIgnoreCase(userISBN));
         if (!isbnIsValid(userISBN)) {
             System.out.println("ISBN inválido. Debe ser una letra seguida de tres números (por ejemplo, A123).");
             return;
         }
+        boolean isDeleted = bookList.removeIf(book -> book.getISBN().equalsIgnoreCase(userISBN));
         if (isDeleted) {
             System.out.println("Libro eliminado con éxito");
         }

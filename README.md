@@ -26,7 +26,7 @@ La aplicación debe ofrecer una interfaz interactiva en la consola que permita r
 4. Gestión de proyectos: [Trello](https://trello.com/b/dFOFu7Q0/tech-book-manager-app)
 
 ## DEMO:
-![Tech Book Manager App]([./readme-files/lista-compra-ref.gif](https://github.com/Segunda-Formula/Tech_Book_Manager_App2/blob/main/Readme%20Files/Demo%20Tech%20Book%20Manager.mp4))
+![Tech Book Manager App](https://github.com/Segunda-Formula/Tech_Book_Manager_App2/blob/main/Readme%20Files/Demo%20Tech%20Book%20Manager.mp4)
 
 
 ## 🤝 Contribuyentes

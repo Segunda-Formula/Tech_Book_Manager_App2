@@ -39,7 +39,7 @@ public class Application {
                 case 1:
                     java.lang.System.out.println("Opción 1: Añadir libro");
                     this.printAddBookMenu();
-                    continue;
+                    break;
                 case 2:
                     System.out.println("Opción 2: Ver todos los libros ");
                     this.printList();
@@ -65,48 +65,31 @@ public class Application {
         String addTitulo = sc.nextLine();
         System.out.println("Ingrese autor");
         String addAutor = sc.nextLine();
-        
-        this.createBook(addISBN, addTitulo, addAutor);
-        
-        
-
-      //  Book nuevoBook = new Book(addISBN, addTitulo, addAutor);
-
-      //  boolean isValid = true;
-/*
-        if (addISBN.isEmpty() || addTitulo.isEmpty() || addAutor.isEmpty()) {
-            System.out.println("Todos los campos son obligatorios. Por favor, intente nuevamente.");
-            isValid = false;
-        }
-        for (Book book : bookList) {
-            if (book.getISBN().equals(addISBN)) {
-                System.out.println("Ya existe un libro con ese ISBN. No se puede añadir el libro.");
-                isValid = false;
-            }
-        }
-
-
-
-
-        if (isValid) {
-            bookList.add(nuevoBook);
-            System.out.println("Libro añadido correctamente");
-        }  */
+        //try {
+            this.createBook(addISBN, addTitulo, addAutor);
+           /* System.out.println("El libro se ha añadido");
+        } catch (Exception ex){
+            System.out.println(ex.getMessage());
+        }*/
     }
 
     private void createBook(String addISBN, String addTitulo, String addAutor) {
-        Book book = new Book(addISBN, addTitulo, addAutor);
-        bookList.add(book);
 
+        for (Book books : bookList) {
+            if (addISBN.equals(books.getISBN())) {
+                System.out.println("Este libro ya existe");
+                //throw new IllegalArgumentException("Este libro ya existe");
+            }
+            Book book = new Book(addISBN, addTitulo, addAutor);
+            bookList.add(book);
+        }
     }
-
     private void printList() {
         if (bookList.isEmpty()) System.out.println("No hay libros en la colección.");
         for (Book book : bookList) {
             System.out.println(book.toString());
         }
     }
-
     private boolean isbnIsValid(String userISBN) {
         String patron = "^[A-Za-z]\\d{3}$";
         return userISBN.matches(patron);

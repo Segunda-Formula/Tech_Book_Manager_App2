@@ -1,16 +1,13 @@
 package org.example;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Application {
 
-    private ArrayList<Book> bookList = new ArrayList<>();
+    private final BookManager bookManager = new BookManager();
 
     public Application() {
-        this.bookList.add(new Book("A123", "Java for dummies", "Burd Barry"));
-        this.bookList.add(new Book("A124", "In Search of Lost Time", "Marcel Proust"));
-        this.bookList.add(new Book("A125", "One Hundred Years of Solitude", "Gabriel García Márquez"));
+
     }
 
     Scanner sc = new Scanner(System.in);
@@ -67,33 +64,18 @@ public class Application {
         String addAutor = sc.nextLine();
 
         try {
-            this.createBook(addISBN, addTitulo, addAutor);
+            this.bookManager.createBook(addISBN, addTitulo, addAutor);
             System.out.println("El libro se ha añadido");
         } catch (Exception ex){
             System.out.println(ex.getMessage());
         }
     }
 
-    private void createBook(String addISBN, String addTitulo, String addAutor) {
-
-        for (Book book : bookList) {
-            if (addISBN.equals(book.getISBN())) {
-                throw new IllegalArgumentException("Este libro ya existe");
-            }
-        }
-        Book book = new Book(addISBN, addTitulo, addAutor);
-        bookList.add(book);
-    }
-
     private void printList() {
-        if (bookList.isEmpty()) System.out.println("No hay libros en la colección.");
-        for (Book book : bookList) {
+        if (bookManager.bookList.isEmpty()) System.out.println("No hay libros en la colección.");
+        for (Book book : bookManager.bookList) {
             System.out.println(book.toString());
         }
-    }
-    private boolean isbnIsValid(String userISBN) {
-        String patron = "^[A-Za-z]\\d{3}$";
-        return userISBN.matches(patron);
     }
 
     private void printRemoveBookMenu() {
@@ -101,17 +83,11 @@ public class Application {
         String userISBN = sc.nextLine();
 
         try{
-            this.deleteBook(userISBN);
+            this.bookManager.deleteBook(userISBN);
             System.out.println("El libro se ha eliminado.");
         } catch (Exception ex){
             System.out.println(ex.getMessage());
         }
     }
 
-    private void deleteBook(String userISBN) {
-        if (!isbnIsValid(userISBN)) {
-            throw new IllegalArgumentException("ISBN inválido. Debe ser una letra seguida de tres números (por ejemplo, A123).");
-        }
-        bookList.removeIf(book -> book.getISBN().equalsIgnoreCase(userISBN));
-    }
 }

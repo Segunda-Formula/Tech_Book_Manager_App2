@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class BookManager {
     public ArrayList<Book> bookList = new ArrayList<Book>();
@@ -15,7 +16,6 @@ public class BookManager {
                 throw new IllegalArgumentException("Este libro ya existe");
             }
         }
-
         if (!isbnIsValid(addISBN)) {
             throw new IllegalArgumentException("ISBN inválido. Debe ser una letra seguida de tres números (por ejemplo, A123).");
         }
@@ -29,8 +29,12 @@ public class BookManager {
         return addISBN.matches(patron);
     }
 
-
     public void deleteBook(String userISBN) {
+
         bookList.removeIf(book -> book.getISBN().equalsIgnoreCase(userISBN));
+    }
+
+    public List<Book> getAllBooks() {
+        return List.of();
     }
 }

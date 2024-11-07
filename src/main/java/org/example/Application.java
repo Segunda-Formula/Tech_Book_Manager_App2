@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Application {
@@ -72,8 +74,8 @@ public class Application {
     }
 
     private void printList() {
-        if (bookManager.bookList.isEmpty()) System.out.println("No hay libros en la colección.");
-        for (Book book : bookManager.bookList) {
+        List <Book> bookList = bookManager.getAllBooks();
+        for (Book book : bookList) {
             System.out.println(book.toString());
         }
     }

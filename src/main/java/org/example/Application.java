@@ -46,7 +46,7 @@ public class Application {
                     break;
                 case 3:
                     java.lang.System.out.println("Opción 3: Eliminar libro");
-                    this.deleteBook();
+                    this.printRemoveBookMenu();
                     break;
                 case 4:
                     java.lang.System.out.println("Opción 4: Cambiar repositorio");
@@ -96,16 +96,22 @@ public class Application {
         return userISBN.matches(patron);
     }
 
-    private void deleteBook() {
+    private void printRemoveBookMenu() {
         System.out.println("Ingrese el ISBN del libro a eliminar (una letra seguida de tres números, por ejemplo, A123): ");
         String userISBN = sc.nextLine();
+
+        try{
+            this.deleteBook(userISBN);
+            System.out.println("El libro se ha eliminado.");
+        } catch (Exception ex){
+            System.out.println(ex.getMessage());
+        }
+    }
+
+    private void deleteBook(String userISBN) {
         if (!isbnIsValid(userISBN)) {
-            System.out.println("ISBN inválido. Debe ser una letra seguida de tres números (por ejemplo, A123).");
-            return;
+            throw new IllegalArgumentException("ISBN inválido. Debe ser una letra seguida de tres números (por ejemplo, A123).");
         }
-        boolean isDeleted = bookList.removeIf(book -> book.getISBN().equalsIgnoreCase(userISBN));
-        if (isDeleted) {
-            System.out.println("Libro eliminado con éxito");
-        }
+        bookList.removeIf(book -> book.getISBN().equalsIgnoreCase(userISBN));
     }
 }

@@ -6,9 +6,6 @@ import java.util.List;
 public class BookManager {
     public ArrayList<Book> bookList = new ArrayList<Book>();
 
-    public BookManager() {
-    }
-
     public void createBook(String addISBN, String addTitulo, String addAutor) {
 
         for (Book book : bookList) {
@@ -35,6 +32,6 @@ public class BookManager {
     }
 
     public List<Book> getAllBooks() {
-        return List.of();
+        return this.bookList;
     }
 }

@@ -2,7 +2,7 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        Application app = new Application();
+        ApplicationView app = new ApplicationView();
         app.printMenu();
     }
 }

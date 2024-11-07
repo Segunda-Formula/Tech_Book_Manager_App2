@@ -65,25 +65,26 @@ public class Application {
         String addTitulo = sc.nextLine();
         System.out.println("Ingrese autor");
         String addAutor = sc.nextLine();
-        //try {
+
+        try {
             this.createBook(addISBN, addTitulo, addAutor);
-           /* System.out.println("El libro se ha añadido");
+            System.out.println("El libro se ha añadido");
         } catch (Exception ex){
             System.out.println(ex.getMessage());
-        }*/
+        }
     }
 
     private void createBook(String addISBN, String addTitulo, String addAutor) {
 
-        for (Book books : bookList) {
-            if (addISBN.equals(books.getISBN())) {
-                System.out.println("Este libro ya existe");
-                //throw new IllegalArgumentException("Este libro ya existe");
+        for (Book book : bookList) {
+            if (addISBN.equals(book.getISBN())) {
+                throw new IllegalArgumentException("Este libro ya existe");
             }
-            Book book = new Book(addISBN, addTitulo, addAutor);
-            bookList.add(book);
         }
+        Book book = new Book(addISBN, addTitulo, addAutor);
+        bookList.add(book);
     }
+
     private void printList() {
         if (bookList.isEmpty()) System.out.println("No hay libros en la colección.");
         for (Book book : bookList) {

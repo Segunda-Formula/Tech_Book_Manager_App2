@@ -26,10 +26,12 @@ public class MySQLBookRepository {
     public List<Book> findAll(){
         String sql = "SELECT * FROM books";
         List<Book> bookList = new ArrayList<>();
+
         try {
             Connection connection = MySQLConnection.getConnection();
             Statement statement = connection.createStatement();
             ResultSet res = statement.executeQuery(sql);
+
             while (res.next()){
                 String isbn = res.getString("isbn");
                 String title = res.getString("title");
@@ -44,4 +46,16 @@ public class MySQLBookRepository {
       return bookList;
     }
 
+    public String findByIsbn(String userIsbn) {
+        String sql = "SELECT `isbn`, `title`, `author` FROM `books` WHERE isbn='A123'";
+
+        try {
+            Connection connection = MySQLConnection.getConnection();
+            Statement statement = connection.createStatement();
+
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return userIsbn;
+    }
 }

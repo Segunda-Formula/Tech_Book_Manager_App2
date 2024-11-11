@@ -9,9 +9,12 @@ public class Main {
 
         MySQLBookRepository bookRepository = new MySQLBookRepository();
 
-        List<Book> list = bookRepository.findAll();
-        for (Book book : list) {
-            System.out.println(book);
+       // List<Book> list = bookRepository.findAll();
+       // for (Book book : list) {
+       //     System.out.println(book);
+
+        String bookByIsbn = bookRepository.findByIsbn("A123");
+        System.out.println(bookByIsbn);
         }
     }
-}
+//}

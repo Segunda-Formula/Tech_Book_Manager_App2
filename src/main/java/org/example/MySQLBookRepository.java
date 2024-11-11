@@ -1,8 +1,11 @@
 package org.example;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MySQLBookRepository {
 
@@ -19,4 +22,26 @@ public class MySQLBookRepository {
             System.out.println(ex.getMessage());
         }
     }
+
+    public List<Book> findAll(){
+        String sql = "SELECT * FROM books";
+        List<Book> bookList = new ArrayList<>();
+        try {
+            Connection connection = MySQLConnection.getConnection();
+            Statement statement = connection.createStatement();
+            ResultSet res = statement.executeQuery(sql);
+            while (res.next()){
+                String isbn = res.getString("isbn");
+                String title = res.getString("title");
+                String author = res.getString("author");
+
+                Book book = new Book(isbn, title, author);
+                bookList.add(book);
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+      return bookList;
+    }
+
 }

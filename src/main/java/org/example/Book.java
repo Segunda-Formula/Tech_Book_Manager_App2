@@ -5,10 +5,6 @@ public class Book {
     private String title;
     private String author;
 
-    public String getIsbn() {
-        return isbn;
-    }
-
     public Book(String ISBN, String title, String author){
         this.isbn = ISBN;
         this.title = title;
@@ -21,6 +17,10 @@ public class Book {
                 "\nISBN: " + isbn +
                 " \nTítulo: " + title +
                 " \nAutor: " + author;
+    }
+
+    public String getIsbn() {
+        return isbn;
     }
 
     public String getTitle() {

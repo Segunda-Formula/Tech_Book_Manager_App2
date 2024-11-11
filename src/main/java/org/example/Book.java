@@ -1,25 +1,33 @@
 package org.example;
 
 public class Book {
-    private String ISBN;
-    private String Title;
-    private String Author;
+    private String isbn;
+    private String title;
+    private String author;
 
-    public String getISBN() {
-        return ISBN;
+    public String getIsbn() {
+        return isbn;
     }
 
     public Book(String ISBN, String title, String author){
-        this.ISBN = ISBN;
-        this.Title = title;
-        this.Author = author;
+        this.isbn = ISBN;
+        this.title = title;
+        this.author = author;
     }
 
     @Override
     public String toString() {
         return
-                "\nISBN: " + ISBN +
-                " \nTítulo: " + Title +
-                " \nAutor: " + Author;
+                "\nISBN: " + isbn +
+                " \nTítulo: " + title +
+                " \nAutor: " + author;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
     }
 }

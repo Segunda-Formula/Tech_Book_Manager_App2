@@ -9,7 +9,7 @@ public class BookManager {
     public void createBook(String addISBN, String addTitulo, String addAutor) {
 
         for (Book book : bookList) {
-            if (addISBN.equals(book.getISBN())) {
+            if (addISBN.equals(book.getIsbn())) {
                 throw new IllegalArgumentException("Este libro ya existe");
             }
         }
@@ -28,7 +28,7 @@ public class BookManager {
 
     public void deleteBook(String userISBN) {
 
-        bookList.removeIf(book -> book.getISBN().equalsIgnoreCase(userISBN));
+        bookList.removeIf(book -> book.getIsbn().equalsIgnoreCase(userISBN));
     }
 
     public List<Book> getAllBooks() {

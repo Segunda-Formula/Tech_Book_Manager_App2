@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class MySQLBookRepository {
 
@@ -46,16 +47,26 @@ public class MySQLBookRepository {
       return bookList;
     }
 
-    public String findByIsbn(String userIsbn) {
-        String sql = "SELECT `isbn`, `title`, `author` FROM `books` WHERE isbn='A123'";
+    public Optional<Book> findByIsbn(String isbn) {
+        String sql = "SELECT * FROM books where isbn='%s'".formatted(isbn);
 
         try {
             Connection connection = MySQLConnection.getConnection();
             Statement statement = connection.createStatement();
 
+            ResultSet res = statement.executeQuery(sql);
+
+            if(res.next()) {
+                Book book =  new Book(res.getString("isbn"),
+                        res.getString("title"),
+                        res.getString("author"));
+
+                return Optional.of(book);
+            }
+
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }
-        return userIsbn;
+        return Optional.empty();
     }
 }

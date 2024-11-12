@@ -24,7 +24,7 @@ public class MySQLBookRepository {
         }
     }
 
-    public List<Book> findAll(){
+    public List<Book> findAll() {
         String sql = "SELECT * FROM books";
         List<Book> bookList = new ArrayList<>();
 
@@ -33,7 +33,7 @@ public class MySQLBookRepository {
             Statement statement = connection.createStatement();
             ResultSet res = statement.executeQuery(sql);
 
-            while (res.next()){
+            while (res.next()) {
                 String isbn = res.getString("isbn");
                 String title = res.getString("title");
                 String author = res.getString("author");
@@ -44,7 +44,7 @@ public class MySQLBookRepository {
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }
-      return bookList;
+        return bookList;
     }
 
     public Optional<Book> findByIsbn(String isbn) {
@@ -56,8 +56,8 @@ public class MySQLBookRepository {
 
             ResultSet res = statement.executeQuery(sql);
 
-            if(res.next()) {
-                Book book =  new Book(res.getString("isbn"),
+            if (res.next()) {
+                Book book = new Book(res.getString("isbn"),
                         res.getString("title"),
                         res.getString("author"));
 
@@ -68,5 +68,21 @@ public class MySQLBookRepository {
             System.out.println(ex.getMessage());
         }
         return Optional.empty();
+    }
+
+    public void deleteByIsbn(String isbn) {
+        String sql = "DELETE FROM `books` WHERE isbn='%s'".formatted(isbn);
+
+        try {
+            Connection connection = MySQLConnection.getConnection();
+            Statement statement = connection.createStatement();
+
+            statement.executeUpdate(sql);
+
+
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+
     }
 }

@@ -28,5 +28,6 @@ public class Main {
               System.out.println("El libro no existe");
             }
         }*/
+        bookRepository.deleteByIsbn("A123");
     }
 }

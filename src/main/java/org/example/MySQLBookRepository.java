@@ -15,10 +15,11 @@ public class MySQLBookRepository {
         String sql = "INSERT INTO books(isbn, title, author) VALUES ('%s', '%s', '%s')"
                 .formatted(book.getIsbn(), book.getTitle(), book.getAuthor());
 
-        try {
-            Connection connection = MySQLConnection.getConnection();
-            Statement statement = connection.createStatement();
+        try (Connection connection = MySQLConnection.getConnection();
+             Statement statement = connection.createStatement()) {
+
             statement.executeUpdate(sql);
+
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }
@@ -28,9 +29,9 @@ public class MySQLBookRepository {
         String sql = "SELECT * FROM books";
         List<Book> bookList = new ArrayList<>();
 
-        try {
-            Connection connection = MySQLConnection.getConnection();
-            Statement statement = connection.createStatement();
+        try (Connection connection = MySQLConnection.getConnection();
+             Statement statement = connection.createStatement()) {
+
             ResultSet res = statement.executeQuery(sql);
 
             while (res.next()) {
@@ -50,9 +51,8 @@ public class MySQLBookRepository {
     public Optional<Book> findByIsbn(String isbn) {
         String sql = "SELECT * FROM books where isbn='%s'".formatted(isbn);
 
-        try {
-            Connection connection = MySQLConnection.getConnection();
-            Statement statement = connection.createStatement();
+        try (Connection connection = MySQLConnection.getConnection();
+             Statement statement = connection.createStatement()) {
 
             ResultSet res = statement.executeQuery(sql);
 
@@ -73,16 +73,13 @@ public class MySQLBookRepository {
     public void deleteByIsbn(String isbn) {
         String sql = "DELETE FROM `books` WHERE isbn='%s'".formatted(isbn);
 
-        try {
-            Connection connection = MySQLConnection.getConnection();
-            Statement statement = connection.createStatement();
+        try (Connection connection = MySQLConnection.getConnection();
+             Statement statement = connection.createStatement();) {
 
             statement.executeUpdate(sql);
-
 
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }
-
     }
 }

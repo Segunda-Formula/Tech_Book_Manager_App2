@@ -33,12 +33,11 @@ public class BookManager {
 
 
     public void deleteBook(String userISBN) {
-
-        bookList.removeIf(book -> book.getIsbn().equalsIgnoreCase(userISBN));
+        bookRepository.deleteByIsbn(userISBN);
     }
 
 
     public List<Book> getAllBooks() {
-        return this.bookList;
+        return bookRepository.findAll();
     }
 }

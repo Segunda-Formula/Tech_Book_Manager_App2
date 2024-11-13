@@ -5,6 +5,7 @@ import java.util.List;
 
 public class BookManager implements BookRepository {
     public ArrayList<Book> bookList = new ArrayList<Book>();
+    private BookRepository bookRepository = new MySQLBookRepository();
 
     @Override
     public void createBook(String addISBN, String addTitulo, String addAutor) {

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class MySQLBookRepository {
+public class MySQLBookRepository implements BookRepository {
 
     public void save(Book book) {
 

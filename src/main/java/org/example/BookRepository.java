@@ -1,13 +1,14 @@
 package org.example;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface BookRepository {
-    void createBook(String addISBN, String addTitulo, String addAutor);
+    void save(Book book);
 
-    boolean isbnIsValid(String addISBN);
+    List<Book> findAll();
 
-    void deleteBook(String userISBN);
+    Optional<Book> findByIsbn(String isbn);
 
-    List<Book> getAllBooks();
+    void deleteByIsbn(String isbn);
 }

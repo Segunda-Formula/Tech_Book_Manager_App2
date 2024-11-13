@@ -10,6 +10,7 @@ import java.util.Optional;
 
 public class MySQLBookRepository implements BookRepository {
 
+    @Override
     public void save(Book book) {
 
         String sql = "INSERT INTO books(isbn, title, author) VALUES ('%s', '%s', '%s')"
@@ -25,6 +26,7 @@ public class MySQLBookRepository implements BookRepository {
         }
     }
 
+    @Override
     public List<Book> findAll() {
         String sql = "SELECT * FROM books";
         List<Book> bookList = new ArrayList<>();
@@ -48,6 +50,7 @@ public class MySQLBookRepository implements BookRepository {
         return bookList;
     }
 
+    @Override
     public Optional<Book> findByIsbn(String isbn) {
         String sql = "SELECT * FROM books where isbn='%s'".formatted(isbn);
 
@@ -70,6 +73,7 @@ public class MySQLBookRepository implements BookRepository {
         return Optional.empty();
     }
 
+    @Override
     public void deleteByIsbn(String isbn) {
         String sql = "DELETE FROM `books` WHERE isbn='%s'".formatted(isbn);
 

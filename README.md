@@ -1,38 +1,62 @@
-# Tech Books Manager App 📗
+Tech Books Manager App 📗
 
-## 🎯 Objetivos del Proyecto: 
+🎯 Project objectives:
 
-* Introducirnos a Java y a la OOP
-* Desarrollar un proyecto incremental
-* Empezar a aplicar técnicas de refactorización
-* Acercarnos poco a poco a la arquitectura y a patrones de diseño usados en Spring
+• Introduces us to OOP.
+• Develop an incremental project.
+• Start applying refactor techniques.
+• Getting closer little by little to Spring Boot architecture.
 
-## ⚙️ Funcionalidades: 
+⚙️ Functions:
 
-El proyecto consiste en crear una aplicación de consola en Java que permita a los usuarios gestionar una colección de libros técnicos de programación.
+BookManager is a Java-based application designed to efficiently manage a collection of programming books. It offers a user-friendly interface to perform the following operations:
 
-La aplicación debe ofrecer una interfaz interactiva en la consola que permita realizar las siguientes operaciones:
+1.  Add new books: Allows users to input details such as title, author, ISBN, and publication year for a new book.
+2.  See all books: Displays a list of all books in the collection, including their details.
+3.  Delete existing books: Enables users to remove a specific book from the collection based on its ID or other criteria.
+4.  Switch between console and DB repositories: Switches between console-based and database-based storage for the book collection.
+5.  Exit: Terminates the application.
 
-1. Ver todos los libros
-2. Añadir un nuevo libro 
-3. Eliminar un libro
-4. Salir de la aplicación
+![SS Diagrama.png](..%2F..%2FOneDrive%2FIm%C3%A1genes%2FSS%20Diagrama.png)
 
-## 💻 Tecnologías y Herramientas
+![SS Diagrama2.png](..%2F..%2FOneDrive%2FIm%C3%A1genes%2FSS%20Diagrama2.png)
 
-1. Lenguaje:  [Java 21](https://docs.aws.amazon.com/corretto/latest/corretto-21-ug/downloads-list.html)
-2. Control de Versiones:  [Github](https://github.com/Segunda-Formula/Tech_Book_Manager_App2)
-3. IDE : [IntellliJ](https://www.jetbrains.com/es-es/idea/git)
-4. Gestión de proyectos: [Trello](https://trello.com/b/dFOFu7Q0/tech-book-manager-app)
+💻 Technology Stack:
 
-## DEMO:
-![Tech Book Manager App](https://github.com/Segunda-Formula/Tech_Book_Manager_App2/blob/main/Demo%20Tech%20Book%20Manager.gif)
+1.  <img src= "https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/>
+2.  <img src= "https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/>
+3.  <img src="https://img.shields.io/badge/Intellij%20Idea-000?logo=intellij-idea&amp;style=for-the-badge"/>
+4.  <img src= "https://shields.io/badge/simple__diarizer-Trello-blue?logo=Trello&style=flat"/>
+5.  <img src= "https://img.shields.io/badge/Lucid-282C33?logo=lucid&logoColor=fff&style=for-the-badge"/>
 
+## Project Structure
+|--- src
+    |--- main
+        |--- java
+            |---org.example
+            |--- config
+                |--- MySQLConnection
+            |--- logic
+                |--- Book
+                |--- BookManager
+                |--- BookRepository
+            |--- persistance
+                |--- InMemoryRepository
+                |--- MySQLBookRepository
+            |--- presentation
+                |--- ApplicationView
+            |--- Main
+|--- test
+    |--- java
+        |--- org.example.persistance
+            |--- InMemoryRepositoryTest
+## Demo
 
-## 🤝 Contribuyentes
+<img src= "![Demo Tech Book Manager.gif](..%2F..%2FDownloads%2FDemo%20Tech%20Book%20Manager.gif)"/>
 
-* Monica Simó [Github](https://github.com/monicasimoF5)
-* Andrea Celmare [Github](https://github.com/andreeaclmr)
-* Stefano Micciche [Github](https://github.com/LilBiscuit12)
-* Paola Perdomo [Github](https://github.com/Paola077)
+## Authors
+    • Monica Simó (https://github.com/monicasimoF5)
+    • Andrea Celmare (https://github.com/andreeaclmr)
+    • Stefano Micciche (https://github.com/StefanoMicciche)
+    • Paola Perdomo (https://github.com/Paola077)
 

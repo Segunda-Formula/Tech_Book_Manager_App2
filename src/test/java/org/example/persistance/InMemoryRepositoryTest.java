@@ -26,14 +26,19 @@ class InMemoryRepositoryTest {
     }
 
     @org.junit.jupiter.api.Test
-    void findAll() {
+    void findAllBooksInMemoryRepository() {
         // GIVEN
-
+        Book book = new Book("A140", "Title1", "Autor1");
+        Book book2 = new Book("A141", "Title2", "Autor2");
+        InMemoryRepository repository = new InMemoryRepository();
 
         //WHEN
-
+        repository.save(book);
+        repository.save(book2);
+        List<Book> listBooks = repository.findAll();
 
         //THEN
+        assertEquals(2,listBooks.size());
     }
 
     @org.junit.jupiter.api.Test

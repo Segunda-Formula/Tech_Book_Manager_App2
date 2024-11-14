@@ -19,7 +19,7 @@ class InMemoryRepositoryTest {
         List<Book> listBooks = repository.findAll();
 
         //THEN
-        assertEquals(1, listBooks.size());
+        assertEquals(4, listBooks.size());
         assertEquals("A140", listBooks.getFirst().getIsbn());
         assertEquals("Autor1", listBooks.getFirst().getAuthor());
         assertEquals("Title1", listBooks.getFirst().getTitle());

@@ -19,7 +19,7 @@ BookManager is a Java-based application designed to efficiently manage a collect
 
 ## UML Diagram
 
-![SS Diagrama.png](img.png)
+![SS Diagrama.png](https://github.com/Segunda-Formula/Tech_Book_Manager_App2/blob/main/DiagramUML.png)
 
 ## 💻 Technology Stack:
 

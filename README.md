@@ -53,9 +53,13 @@ BookManager is a Java-based application designed to efficiently manage a collect
 
 ![Tech Book Manager App](https://github.com/Segunda-Formula/Tech_Book_Manager_App2/blob/main/Demo%20Tech%20Book%20Manager.gif)
 
-## Trello
-![Trello Vista General]()
-![Trello Ejemplo Tarea]()
+## Trello Vista General
+
+![Trello Vista General](https://github.com/Segunda-Formula/Tech_Book_Manager_App2/blob/main/Trello%20vista%20general.png)
+
+## Trello Ejemplo Tarea
+
+![Trello Ejemplo Tarea](https://github.com/Segunda-Formula/Tech_Book_Manager_App2/blob/main/Trello%20ejemplo%20tarea.png))
 
 ## Authors
 

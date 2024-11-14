@@ -42,7 +42,17 @@ class InMemoryRepositoryTest {
     }
 
     @org.junit.jupiter.api.Test
-    void findByIsbn() {
+    void findBookByIsbn() {
+        //GIVEN
+        Book book = new Book("A140", "Title1", "Autor1");
+        InMemoryRepository repository = new InMemoryRepository();
+
+        //WHEN
+        repository.save(book);
+
+        //THEN
+        assertEquals("A140", book.getIsbn());
+
     }
 
     @org.junit.jupiter.api.Test

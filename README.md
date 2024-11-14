@@ -30,26 +30,26 @@ BookManager is a Java-based application designed to efficiently manage a collect
 5.  <img src= "https://img.shields.io/badge/Lucid-282C33?logo=lucid&logoColor=fff&style=for-the-badge"/>
 
 ## Project Structure
-|--- src
-    |--- main
-        |--- java
-            |---org.example
-            |--- config
-                |--- MySQLConnection
-            |--- logic
-                |--- Book
-                |--- BookManager
-                |--- BookRepository
-            |--- persistance
-                |--- InMemoryRepository
-                |--- MySQLBookRepository
-            |--- presentation
-                |--- ApplicationView
-            |--- Main
-|--- test
-    |--- java
-        |--- org.example.persistance
-            |--- InMemoryRepositoryTest
+        |--- src
+            |--- main
+                |--- java
+                    |---org.example
+                    |--- config
+                        |--- MySQLConnection
+                    |--- logic
+                        |--- Book
+                        |--- BookManager
+                        |--- BookRepository
+                    |--- persistance
+                        |--- InMemoryRepository
+                        |--- MySQLBookRepository
+                    |--- presentation
+                        |--- ApplicationView
+                    |--- Main
+        |--- test
+            |--- java
+                |--- org.example.persistance
+                    |--- InMemoryRepositoryTest
 ## Demo
 
 <img src= "![Demo Tech Book Manager.gif](..%2F..%2FDownloads%2FDemo%20Tech%20Book%20Manager.gif)"/>

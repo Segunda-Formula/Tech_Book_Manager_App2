@@ -51,7 +51,12 @@ BookManager is a Java-based application designed to efficiently manage a collect
             |--- java
                 |--- org.example.persistance
                     |--- InMemoryRepositoryTest
-## Demo
+
+## Full Menu Image
+
+![Full Menu Image](https://github.com/Segunda-Formula/Tech_Book_Manager_App2/blob/main/Full%20menu.png)
+
+## Demo GIF
 
 ![Tech Book Manager App](https://github.com/Segunda-Formula/Tech_Book_Manager_App2/blob/main/Demo%20Tech%20Book%20Manager.gif)
 

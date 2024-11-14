@@ -74,6 +74,13 @@ public class ApplicationView {
         System.out.println("2. Base de datos MySQL");
         System.out.println("Seleccione una opción:");
         String optionUser = sc.nextLine();
+
+        if (optionUser.equals("1")) {
+            bookManager.changeRepository(inMemoryRepository);
+        }
+        if(optionUser.equals("2")) {
+            bookManager.changeRepository(mySQLBookRepository);
+        }
     }
 
     private void printAddBookMenu() {

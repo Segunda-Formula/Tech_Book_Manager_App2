@@ -7,9 +7,11 @@ import java.util.List;
 import java.util.Optional;
 
 public class BookManager {
-    public ArrayList<Book> bookList = new ArrayList<Book>();
-    private BookRepository bookRepository = new MySQLBookRepository();
+    private BookRepository bookRepository;
 
+    public BookManager(BookRepository bookRepository) {
+        this.bookRepository = bookRepository;
+    }
 
     public void createBook(String addISBN, String addTitulo, String addAutor) {
 
@@ -39,7 +41,10 @@ public class BookManager {
     }
 
 
-    public List<Book> getAllBooks() {
-        return bookRepository.findAll();
+    public List<Book> getAllBooks() {return bookRepository.findAll();}
+
+    public void changeRepository(BookRepository newRepository){
+        this.bookRepository = newRepository;
     }
+
 }

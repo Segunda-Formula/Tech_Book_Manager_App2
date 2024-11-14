@@ -17,9 +17,8 @@ BookManager is a Java-based application designed to efficiently manage a collect
 4.  Switch between console and DB repositories: Switches between console-based and database-based storage for the book collection.
 5.  Exit: Terminates the application.
 
-![SS Diagrama.png](..%2F..%2FOneDrive%2FIm%C3%A1genes%2FSS%20Diagrama.png)
+![SS Diagrama.png](img.png)
 
-![SS Diagrama2.png](..%2F..%2FOneDrive%2FIm%C3%A1genes%2FSS%20Diagrama2.png)
 
 💻 Technology Stack:
 

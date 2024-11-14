@@ -1,4 +1,7 @@
-package org.example;
+package org.example.presentation;
+
+import org.example.logic.Book;
+import org.example.logic.BookManager;
 
 import java.util.List;
 import java.util.Scanner;
@@ -48,12 +51,21 @@ public class ApplicationView {
                     break;
                 case 4:
                     java.lang.System.out.println("Opción 4: Cambiar repositorio");
+                    this.printChangeRepositoryMenu();
                     break;
                 case 5:
                     java.lang.System.out.println("Opción 5: Salir");
                     break;
             }
         } while (opcion != 5);
+    }
+
+    private void printChangeRepositoryMenu() {
+        System.out.println("Seleccione el tipo de repositorio");
+        System.out.println("1. Memoria");
+        System.out.println("2. Base de datos MySQL");
+        System.out.println("Seleccione una opción:");
+        String optionUser = sc.nextLine();
     }
 
     private void printAddBookMenu() {

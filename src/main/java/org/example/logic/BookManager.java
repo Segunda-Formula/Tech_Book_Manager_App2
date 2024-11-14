@@ -1,4 +1,6 @@
-package org.example;
+package org.example.logic;
+
+import org.example.persistance.MySQLBookRepository;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,10 +1,13 @@
-package org.example;
+package org.example.persistance;
+
+import org.example.logic.BookRepository;
+import org.example.logic.Book;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class InMemoryRepository implements BookRepository{
+public class InMemoryRepository implements BookRepository {
     private static List<Book> booksDB = new ArrayList<>();
 
     @Override

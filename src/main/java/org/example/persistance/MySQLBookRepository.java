@@ -1,4 +1,8 @@
-package org.example;
+package org.example.persistance;
+
+import org.example.logic.BookRepository;
+import org.example.config.MySQLConnection;
+import org.example.logic.Book;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

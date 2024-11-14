@@ -20,7 +20,7 @@ BookManager is a Java-based application designed to efficiently manage a collect
 
 ## UML Diagram
 
-![SS Diagrama.png](https://github.com/Segunda-Formula/Tech_Book_Manager_App2/blob/main/DiagramUML.png)
+![SS Diagrama.png](https://github.com/Segunda-Formula/Tech_Book_Manager_App2/blob/main/src/Images/DiagramUML.png)
 
 ## 💻 Technology Stack:
 
@@ -54,19 +54,19 @@ BookManager is a Java-based application designed to efficiently manage a collect
 
 ## Full Menu Image
 
-![Full Menu Image](https://github.com/Segunda-Formula/Tech_Book_Manager_App2/blob/main/Full%20menu.png)
+![Full Menu Image](https://github.com/Segunda-Formula/Tech_Book_Manager_App2/blob/main/src/Images/Full%20menu.png)
 
 ## Demo GIF
 
-![Tech Book Manager App](https://github.com/Segunda-Formula/Tech_Book_Manager_App2/blob/main/Demo%20Tech%20Book%20Manager.gif)
+![Tech Book Manager App](https://github.com/Segunda-Formula/Tech_Book_Manager_App2/blob/main/src/Images/Demo%20Tech%20Book%20Manager.gif)
 
 ## Trello Vista General
 
-![Trello Vista General](https://github.com/Segunda-Formula/Tech_Book_Manager_App2/blob/main/Trello%20vista%20general.png)
+![Trello Vista General](https://github.com/Segunda-Formula/Tech_Book_Manager_App2/blob/main/src/Images/Trello%20vista%20general.png)
 
 ## Trello Ejemplo Tarea
 
-![Trello Ejemplo Tarea](https://github.com/Segunda-Formula/Tech_Book_Manager_App2/blob/main/Trello%20ejemplo%20tarea.png))
+![Trello Ejemplo Tarea](https://github.com/Segunda-Formula/Tech_Book_Manager_App2/blob/main/src/Images/Trello%20ejemplo%20tarea.png))
 
 ## Authors
 

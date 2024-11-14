@@ -56,6 +56,16 @@ class InMemoryRepositoryTest {
     }
 
     @org.junit.jupiter.api.Test
-    void deleteByIsbn() {
+    void deleteBookByIsbn() {
+        //GIVEN
+        Book book = new Book("A140", "Title1", "Autor1");
+        InMemoryRepository repository = new InMemoryRepository();
+
+        //WHEN
+        repository.deleteByIsbn("A140");
+        List<Book> listBooks = repository.findAll();
+
+        //THEN
+        assertEquals(0,listBooks.size());
     }
 }

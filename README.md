@@ -2,10 +2,10 @@
 
 ## 🎯 Project objectives:
 
-• Introduces us to OOP.
-• Develop an incremental project.
-• Start applying refactor techniques.
-• Getting closer little by little to Spring Boot architecture.
+- Introduces us to OOP
+- Develop an incremental project
+- Start applying refactor techniques
+- Getting closer little by little to Spring Boot architecture
 
 ## ⚙️ Functions:
 

@@ -2,19 +2,27 @@ package org.example.presentation;
 
 import org.example.logic.Book;
 import org.example.logic.BookManager;
+import org.example.logic.BookRepository;
+import org.example.persistance.InMemoryRepository;
+import org.example.persistance.MySQLBookRepository;
 
 import java.util.List;
 import java.util.Scanner;
 
 public class ApplicationView {
 
-    private final BookManager bookManager = new BookManager();
-
-    public ApplicationView() {
-
-    }
+    private final BookManager bookManager;
+    private final BookRepository inMemoryRepository;
+    private final BookRepository mySQLBookRepository;
 
     Scanner sc = new Scanner(System.in);
+
+    public ApplicationView() {
+        this.mySQLBookRepository = new MySQLBookRepository();
+        this.inMemoryRepository = new InMemoryRepository();
+        this.bookManager = new BookManager(this.inMemoryRepository);
+    }
+
 
     public void printMenu() {
 

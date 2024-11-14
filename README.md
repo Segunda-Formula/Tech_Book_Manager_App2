@@ -53,9 +53,11 @@ BookManager is a Java-based application designed to efficiently manage a collect
 
 ![Tech Book Manager App](https://github.com/Segunda-Formula/Tech_Book_Manager_App2/blob/main/Demo%20Tech%20Book%20Manager.gif)
 
-## Authors
-    • Monica Simó (https://github.com/monicasimoF5)
-    • Andrea Celmare (https://github.com/andreeaclmr)
-    • Stefano Micciche (https://github.com/StefanoMicciche)
-    • Paola Perdomo (https://github.com/Paola077)
+## Authors <img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/></a>
+
+- [ Monica Simó](https://github.com/monicasimoF5)
+    
+    • Andrea Celmare <a href="https://github.com/andreeaclmr"> <img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/></a>
+    • Stefano Micciche <a href="https://github.com/StefanoMicciche"> <img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/></a>
+    • Paola Perdomo <a href="https://github.com/Paola077"> <img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/></a>
 

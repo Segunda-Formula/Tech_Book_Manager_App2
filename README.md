@@ -53,10 +53,15 @@ BookManager is a Java-based application designed to efficiently manage a collect
 
 ![Tech Book Manager App](https://github.com/Segunda-Formula/Tech_Book_Manager_App2/blob/main/Demo%20Tech%20Book%20Manager.gif)
 
-## Authors <img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/></a>
+## Authors
 
-- [ Monica Simó](https://github.com/monicasimoF5)
-- [ Andrea Celmare](https://github.com/andreeaclmr)
-- [ Stefano Micciche](https://github.com/StefanoMicciche)
-- [ Paola Perdomo](https://github.com/Paola077)
-   
+
+- **Andreea Celmare**              
+  [<img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />](https://github.com/andreeaclmr) [<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />]([https://github.com/andreeaclmr](https://www.linkedin.com/in/andreea-alina-celmare/))
+- **Monica Simó**              
+[<img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />](https://github.com/monicasimoF5)
+- **Stefano Micciche**              
+[<img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />]([https://github.com/andreeaclmr](https://github.com/StefanoMicciche))
+- **Paola Perdomo**              
+[<img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />]([https://github.com/andreeaclmr](https://github.com/Paola077))
+

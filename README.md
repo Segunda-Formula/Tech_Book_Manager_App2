@@ -58,5 +58,5 @@ BookManager is a Java-based application designed to efficiently manage a collect
 - [ Monica Simó](https://github.com/monicasimoF5)
 - [ Andrea Celmare](https://github.com/andreeaclmr)
 - [ Stefano Micciche](https://github.com/StefanoMicciche)
-- [ Paola Perdomo](https://github.com/Paola077))
+- [ Paola Perdomo](https://github.com/Paola077)
    

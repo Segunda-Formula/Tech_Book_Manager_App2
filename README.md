@@ -21,7 +21,6 @@ BookManager is a Java-based application designed to efficiently manage a collect
 
 ![SS Diagrama.png](img.png)
 
-
 ## 💻 Technology Stack:
 
 1.  <img src= "https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/>

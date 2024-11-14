@@ -1,13 +1,13 @@
-Tech Books Manager App 📗
+# Tech Books Manager App 📗
 
-🎯 Project objectives:
+## 🎯 Project objectives:
 
 • Introduces us to OOP.
 • Develop an incremental project.
 • Start applying refactor techniques.
 • Getting closer little by little to Spring Boot architecture.
 
-⚙️ Functions:
+## ⚙️ Functions:
 
 BookManager is a Java-based application designed to efficiently manage a collection of programming books. It offers a user-friendly interface to perform the following operations:
 
@@ -17,10 +17,12 @@ BookManager is a Java-based application designed to efficiently manage a collect
 4.  Switch between console and DB repositories: Switches between console-based and database-based storage for the book collection.
 5.  Exit: Terminates the application.
 
+## UML Diagram
+
 ![SS Diagrama.png](img.png)
 
 
-💻 Technology Stack:
+## 💻 Technology Stack:
 
 1.  <img src= "https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/>
 2.  <img src= "https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/>

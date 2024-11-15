@@ -12,11 +12,11 @@
 
 BookManager is a Java-based application designed to efficiently manage a collection of programming books. It offers a user-friendly interface to perform the following operations:
 
-1.  Add new books: Allows users to input details such as title, author, ISBN, and publication year for a new book.
-2.  See all books: Displays a list of all books in the collection, including their details.
-3.  Delete existing books: Enables users to remove a specific book from the collection based on its ID or other criteria.
-4.  Switch between console and DB repositories: Switches between console-based and database-based storage for the book collection.
-5.  Exit: Terminates the application.
+- [x]  Add new books: Allows users to input details such as title, author, ISBN, and publication year for a new book.
+- [x]  See all books: Displays a list of all books in the collection, including their details.
+- [x]  Delete existing books: Enables users to remove a specific book from the collection based on its ID or other criteria.
+- [x]  Switch between console and DB repositories: Switches between console-based and database-based storage for the book collection.
+- [x]  Exit: Terminates the application.
 
 ## Full Menu Image
 

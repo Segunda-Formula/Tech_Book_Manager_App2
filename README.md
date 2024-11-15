@@ -35,18 +35,18 @@ BookManager is a Java-based application designed to efficiently manage a collect
             |--- main
                 |--- java
                     |---org.example
-                    |--- config
-                        |--- MySQLConnection
-                    |--- logic
-                        |--- Book
-                        |--- BookManager
-                        |--- BookRepository
-                    |--- persistance
-                        |--- InMemoryRepository
-                        |--- MySQLBookRepository
-                    |--- presentation
-                        |--- ApplicationView
-                    |--- Main
+                            |--- config
+                                |--- MySQLConnection
+                            |--- logic
+                                |--- Book
+                                |--- BookManager
+                                |--- BookRepository
+                            |--- **persistance**
+                                |--- InMemoryRepository
+                                |--- MySQLBookRepository
+                            |--- **presentation**
+                                |--- ApplicationView
+                            |--- Main
         |--- test
             |--- java
                 |--- org.example.persistance
@@ -70,9 +70,6 @@ BookManager is a Java-based application designed to efficiently manage a collect
 
 ## Authors
 
-
-- **Andreea Celmare**                              
-  [<img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />](https://github.com/andreeaclmr) [<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />](https://www.linkedin.com/in/andreea-alina-celmare/)
 - **Monica Simó**                      
 [<img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />](https://github.com/monicasimoF5) [<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />](https://www.linkedin.com/in/mónica-simó/)
 - **Stefano Micciche**                      
@@ -80,4 +77,5 @@ BookManager is a Java-based application designed to efficiently manage a collect
 [<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />](https://www.linkedin.com/in/stefano-micciche-48949021b/)
 - **Paola Perdomo**                      
 [<img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />](https://github.com/Paola077) [<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />](https://www.linkedin.com/in/paolaperdomo07/)
-
+- **Andreea Celmare**                              
+  [<img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />](https://github.com/andreeaclmr) [<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />](https://www.linkedin.com/in/andreea-alina-celmare/)

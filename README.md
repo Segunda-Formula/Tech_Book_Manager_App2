@@ -41,10 +41,10 @@ BookManager is a Java-based application designed to efficiently manage a collect
                                 |--- Book
                                 |--- BookManager
                                 |--- BookRepository
-                            |--- **persistance**
+                            |--- persistance
                                 |--- InMemoryRepository
                                 |--- MySQLBookRepository
-                            |--- **presentation**
+                            |--- presentation
                                 |--- ApplicationView
                             |--- Main
         |--- test

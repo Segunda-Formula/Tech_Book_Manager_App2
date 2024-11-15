@@ -18,17 +18,14 @@ BookManager is a Java-based application designed to efficiently manage a collect
 4.  Switch between console and DB repositories: Switches between console-based and database-based storage for the book collection.
 5.  Exit: Terminates the application.
 
-## UML Diagram
+## Full Menu Image
 
-![SS Diagrama.png](https://github.com/Segunda-Formula/Tech_Book_Manager_App2/blob/main/src/Images/DiagramUML.png)
+![Full Menu Image](https://github.com/Segunda-Formula/Tech_Book_Manager_App2/blob/main/src/Images/Full%20menu.png)
 
-## 💻 Technology Stack:
+## Demo GIF
 
-1.  <img src= "https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/>
-2.  <img src= "https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/>
-3.  <img src="https://img.shields.io/badge/Intellij%20Idea-000?logo=intellij-idea&amp;style=for-the-badge"/>
-4.  <img src= "https://shields.io/badge/simple__diarizer-Trello-blue?logo=Trello&style=flat"/>
-5.  <img src= "https://img.shields.io/badge/Lucid-282C33?logo=lucid&logoColor=fff&style=for-the-badge"/>
+![Tech Book Manager App](https://github.com/Segunda-Formula/Tech_Book_Manager_App2/blob/main/src/Images/Demo%20Tech%20Book%20Manager.gif)
+
 
 ## Project Structure
         |--- src
@@ -52,13 +49,20 @@ BookManager is a Java-based application designed to efficiently manage a collect
                 |--- org.example.persistance
                     |--- InMemoryRepositoryTest
 
-## Full Menu Image
 
-![Full Menu Image](https://github.com/Segunda-Formula/Tech_Book_Manager_App2/blob/main/src/Images/Full%20menu.png)
+## UML Diagram
 
-## Demo GIF
+![SS Diagrama.png](https://github.com/Segunda-Formula/Tech_Book_Manager_App2/blob/main/src/Images/DiagramUML.png)
 
-![Tech Book Manager App](https://github.com/Segunda-Formula/Tech_Book_Manager_App2/blob/main/src/Images/Demo%20Tech%20Book%20Manager.gif)
+
+## 💻 Technology Stack:
+
+1.  <img src= "https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/>
+2.  <img src= "https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/>
+3.  <img src="https://img.shields.io/badge/Intellij%20Idea-000?logo=intellij-idea&amp;style=for-the-badge"/>
+4.  <img src= "https://shields.io/badge/simple__diarizer-Trello-blue?logo=Trello&style=flat"/>
+5.  <img src= "https://img.shields.io/badge/Lucid-282C33?logo=lucid&logoColor=fff&style=for-the-badge"/>
+
 
 ## Trello Vista General
 

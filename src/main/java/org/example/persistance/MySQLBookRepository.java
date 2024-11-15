@@ -4,10 +4,7 @@ import org.example.logic.BookRepository;
 import org.example.config.MySQLConnection;
 import org.example.logic.Book;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -17,13 +14,14 @@ public class MySQLBookRepository implements BookRepository {
     @Override
     public void save(Book book) {
 
-        String sql = "INSERT INTO books(isbn, title, author) VALUES ('%s', '%s', '%s')"
-                .formatted(book.getIsbn(), book.getTitle(), book.getAuthor());
+        String sql = "INSERT INTO books(isbn, title, author) VALUES (?, ?, ?)";
 
         try (Connection connection = MySQLConnection.getConnection();
-             Statement statement = connection.createStatement()) {
-
-            statement.executeUpdate(sql);
+             PreparedStatement statement = connection.prepareStatement(sql)) {
+             statement.setString(1, book.getIsbn());
+             statement.setString(2, book.getTitle());
+             statement.setString(3, book.getAuthor());
+            statement.execute();
 
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
@@ -56,12 +54,14 @@ public class MySQLBookRepository implements BookRepository {
 
     @Override
     public Optional<Book> findByIsbn(String isbn) {
-        String sql = "SELECT * FROM books where isbn='%s'".formatted(isbn);
+        String sql = "SELECT * FROM books where isbn=?";
 
         try (Connection connection = MySQLConnection.getConnection();
-             Statement statement = connection.createStatement()) {
+             PreparedStatement statement = connection.prepareStatement(sql)) {
 
-            ResultSet res = statement.executeQuery(sql);
+            statement.setString(1, isbn);
+
+            ResultSet res = statement.executeQuery();
 
             if (res.next()) {
                 Book book = new Book(res.getString("isbn"),
@@ -79,12 +79,14 @@ public class MySQLBookRepository implements BookRepository {
 
     @Override
     public void deleteByIsbn(String isbn) {
-        String sql = "DELETE FROM `books` WHERE isbn='%s'".formatted(isbn);
+        String sql = "DELETE FROM `books` WHERE isbn=?";
 
         try (Connection connection = MySQLConnection.getConnection();
-             Statement statement = connection.createStatement();) {
+             PreparedStatement statement = connection.prepareStatement(sql)) {
 
-            statement.executeUpdate(sql);
+            statement.setString(1, isbn);
+
+            statement.execute();
 
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());

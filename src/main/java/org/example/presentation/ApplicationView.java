@@ -23,9 +23,9 @@ public class ApplicationView {
         this.bookManager = new BookManager(this.inMemoryRepository);
     }
 
+    String RESET = "\033[0m";
 
     public void printMenu() {
-
 
         int opcion = 0;
         do {
@@ -37,12 +37,12 @@ public class ApplicationView {
             try {
                 opcion = java.lang.Integer.parseInt(input);
             } catch (java.lang.Exception ex) {
-                java.lang.System.out.println("Opción inválida. Por favor, introduce un número del 1 al 5.");
+                java.lang.System.out.println("\033[31mOpción inválida. Por favor, introduce un número del 1 al 5." + RESET);
                 continue;
             }
 
             if (opcion < 1 || opcion > 5) {
-                java.lang.System.out.println("Opción inválida. Por favor, seleccione una opción del 1 al 5.");
+                java.lang.System.out.println("\033[31mOpción inválida. Por favor, seleccione una opción del 1 al 5." + RESET);
             }
             switch (opcion) {
                 case 1:
@@ -93,7 +93,7 @@ public class ApplicationView {
 
         try {
             this.bookManager.createBook(addISBN, addTitulo, addAutor);
-            System.out.println("El libro se ha añadido");
+            System.out.println("\n\u001B[33mEl libro se ha añadido!!" + RESET);
         } catch (Exception ex){
             System.out.println(ex.getMessage());
         }
@@ -107,12 +107,12 @@ public class ApplicationView {
     }
 
     private void printRemoveBookMenu() {
-        System.out.println("Ingrese el ISBN del libro a eliminar (una letra seguida de tres números, por ejemplo, A123): ");
+        System.out.println("Ingrese el ISBN del libro a eliminar (una letra seguida de tres números, por ejemplo, A123):");
         String userISBN = sc.nextLine();
 
         try{
             this.bookManager.deleteBook(userISBN);
-            System.out.println("El libro se ha eliminado.");
+            System.out.println("\n\u001B[33mEl libro se ha eliminado." + RESET);
         } catch (Exception ex){
             System.out.println(ex.getMessage());
         }

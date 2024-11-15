@@ -7,16 +7,18 @@ public class Book {
 
     public Book(String ISBN, String title, String author){
 
+        String RESET = "\033[0m";
+
         if (!isbnIsValid(ISBN)) {
-            throw new IllegalArgumentException("ISBN inválido. Debe ser una letra seguida de tres números (por ejemplo, A123).");
+            throw new IllegalArgumentException("\033[31mISBN inválido. Debe ser una letra seguida de tres números (por ejemplo, A123)." + RESET);
         }
 
         if(title == null || title.isEmpty()) {
-            throw new IllegalArgumentException("El título no puede estar vacío");
+            throw new IllegalArgumentException("\033[31mEl título no puede estar vacío" + RESET);
         }
 
         if(author == null || author.isEmpty()) {
-            throw new IllegalArgumentException("El Autor no puede estar vacío");
+            throw new IllegalArgumentException("\033[31mEl Autor no puede estar vacío" + RESET);
         }
 
         this.isbn = ISBN;

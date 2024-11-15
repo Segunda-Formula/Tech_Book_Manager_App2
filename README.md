@@ -66,7 +66,7 @@ BookManager is a Java-based application designed to efficiently manage a collect
 
 ## Trello Vista General
 
-![Trello Vista General](https://github.com/Segunda-Formula/Tech_Book_Manager_App2/blob/main/src/Images/Trello%20vista%20general.png)
+![Trello Vista General](https://github.com/Segunda-Formula/Tech_Book_Manager_App2/blob/main/src/Images/Screenshot%202024-11-15%20at%2010.49.43.png)
 
 ## Trello Ejemplo Tarea
 
